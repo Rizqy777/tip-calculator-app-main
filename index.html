@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+<div class="container__header">
+  <span class="title">
+    SPLI <br> TTER
+  </span>
+</div>
+<div class="container_app">
+  <div class="container_input ">
+    <label for="money" class="labels">Bill</label>
+    <input type="text" id="money" placeholder="0" class="input dollar">
+    
+
+  </div>
+<div class="container_percent">
+  <span class="label">Select Tip %</span>
+  <div class="container_buttons">
+  <button class="btn btn--5"  data-percent="5">5%</button>
+  <button class="btn btn--10" data-percent="10">10%</button>
+  <button class="btn btn--15" data-percent="15">15%</button>
+  <button class="btn btn--25" data-percent="25">25%</button>
+  <button class="btn btn--50" data-percent="50">50%</button>
+  <input class="input_custom" placeholder="Custom"></input>
+</div>
+</div>
+<div class="container_input">
+  <div class="container_input--label">
+  <label for="people" class="labels">Number of People</label>
+  <span class="error">can`t be zero</span>
+</div>
+  <input type="text" id="people" class="input input_person" placeholder="0">
+  
+</div>
+<div class="container_result">
+  <div class="subcontainer_total">
+  <div class="container_amount">
+    <div class="amount">
+  <span class="tip-amount">Tip Amount</span>
+  <span class="person">/ person</span>
+</div>
+  <span class="result--tip_amount">
+    $0.00
+  </span>
+</div>
+<div class="container_total">
+  <div class="total">
+  <span class="total">Total</span>
+  <span class="person">/ person</span>
+</div>
+
+<span class="result--total">
+  $0.00
+</span>
+</div>
+</div>
+<button class="btn--reset">Reset</button>
+  
+</div>
+</div>
+</main>
+  <script src="index.js"></script>
+</body>
+</html>

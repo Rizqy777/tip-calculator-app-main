@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    /* border: 1px solid black; */
+}
+:root{
+    /* ### Primary */
+
+--Strong-cyan: hsl(172, 67%, 45%);
+
+/* ### Neutral */
+
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(184, 74%, 89%);
+--Very-light-grayish-cyan: hsl(180, 78%, 84%);
+--White: hsl(0, 0%, 100%);
+}
+
+body{
+    min-height: 100vh;
+background-color: var(--Light-grayish-cyan);
+color: var(--Very-dark-cyan);
+}
+
+main{
+max-width: 500px;
+margin: 0 auto;
+min-width: 300px;
+}
+
+
+.container__header{
+    text-align: center;
+    padding: 10px;
+}
+
+.title{
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+.container_app{
+    padding: 20px;
+    
+    background-color: var(--White);
+    border-radius: 30px 30px 0 0 ;
+}
+.container_input{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    background-color: var(--Light-grayish-cyan);
+    direction: rtl;
+    padding: 0px 10px;
+    color: var(--Very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    outline: none;
+    margin-bottom: 10px;
+}
+.input:focus{
+    outline: 2px solid var(--Strong-cyan);
+    
+}
+.dollar{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+.labels,.label{
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
+.label{
+    display: inline-block;
+}
+
+.container_buttons{
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.error{
+    color: rgb(255, 83, 83);
+    font-size: .9rem;
+    margin-bottom: 10px;
+    display: none;
+}
+
+
+button{
+    
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    padding:  5px 10px;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input_custom{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+    border: none;
+    padding:  5px 10px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    direction: rtl;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container_input--label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.active{
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.container_result{
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container_amount,.container_total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.amount,.total{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+.person{
+    color: rgba(255, 255, 255, 0.49);
+    font-size: .7rem;
+}
+
+.result--tip_amount,.result--total{
+color: var(--Strong-cyan);
+font-size: 2rem;
+direction: rtl;
+}
+
+.btn--reset{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    width: 100%;
+}
+.btn--reset:hover{
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media (min-width: 700px) {
+    
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    main{
+        max-width: 800px;
+    }
+    .container_app{
+        display: grid;
+        grid-template-columns: 50% calc(50% - 20px);
+        gap: 20px;
+    }
+    .container_percent{
+        grid-column: 1/ 2;
+    }
+    .container_result{
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    .container_total{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .container_input{
+        grid-column: 1/2;
+    }
+
+    .btn--reset{
+        float: bottom;
+    }
+    
+
+    .container__header{
+        margin-bottom: 30px;
+    
+    }
+}
